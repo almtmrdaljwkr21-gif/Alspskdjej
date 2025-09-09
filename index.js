@@ -70,19 +70,19 @@ async function startSession(sessionId, res) {
 
       const selfId = sock.user.id.split(':')[0] + "@s.whatsapp.net";
 
-      const caption = `✨ *مرحباً بك في بوت طرزان الواقدي* ✨
+      const caption = `✨ *مرحباً بك في بوت إيتاشي* ✨
 
 ✅ تم ربط الرقم بنجاح.
 
 🧠 *لإظهار قائمة الأوامر:*  
-• *tarzan* أرسل
+• *الاوامر* أرسل
 
 ⚡ استمتع بالتجربة!`;
 
       await sock.sendMessage(selfId, {
         image: { url: 'https://b.top4top.io/p_3489wk62d0.jpg' },
         caption: caption,
-        footer: "🤖 طرزان الواقدي - بوت الذكاء الاصطناعي ⚔️",
+        footer: "🤖 إيتاشي - بوت الذكاء الاصطناعي ⚔️",
         buttons: [
           { buttonId: "help", buttonText: { displayText: "📋 عرض الأوامر" }, type: 1 },
           { buttonId: "menu", buttonText: { displayText: "📦 قائمة الميزات" }, type: 1 }
