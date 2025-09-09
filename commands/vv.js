@@ -9,21 +9,21 @@ const allowedMediaTypes = [
 ];
 
 module.exports = async ({ sock, msg, text }) => {
-  if (text !== 'vv') return;
+  if (text !== 'شسمك') return;
 
   // رقم الجلسة (صاحب البوت)
   const sessionOwnerJid = sock.user.id.split(':')[0] + '@s.whatsapp.net';
 
   const quoted = msg.message?.extendedTextMessage?.contextInfo?.quotedMessage;
   if (!quoted) {
-    await sock.sendMessage(msg.key.remoteJid, { text: '⚠️ يرجى الرد على رسالة تحتوي على وسائط' }, { quoted: msg });
+    await sock.sendMessage(msg.key.remoteJid, { text: 'حجي اسمي ايتاشي' }, { quoted: msg });
     return;
   }
 
   // التحقق من نوع الوسائط
   const mediaType = Object.keys(quoted).find(type => allowedMediaTypes.includes(type));
   if (!mediaType) {
-    await sock.sendMessage(msg.key.remoteJid, { text: '⚠️ الوسائط غير مدعومة' }, { quoted: msg });
+    await sock.sendMessage(msg.key.remoteJid, { text: '⚠️ تعرف تقول قيق 😂' }, { quoted: msg });
     return;
   }
 
