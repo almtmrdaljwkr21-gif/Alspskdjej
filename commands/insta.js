@@ -39,7 +39,7 @@ module.exports = async ({ sock, msg, text, reply, from }) => {
 
     await sock.sendMessage(from, {
       [type]: mediaBuffer,
-      caption: `📥 تم تحميل الوسائط بنجاح من إنستغرام.\n> طـــــرزان الواقدي 🔥`
+      caption: `📥 تم تحميل الوسائط بنجاح من إنستغرام.\n> إيتاشي 🔥`
     }, { quoted: msg });
 
     await sock.sendMessage(from, { react: { text: '✅', key: msg.key } });
